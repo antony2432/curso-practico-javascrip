@@ -16,13 +16,13 @@ console.groupEnd()
 // Codigo de triangulo
 console.group('Triangulos')
 // Perimetro de un triangulo
-function perimetroTriangulo(ladoTriangulo1, ladoTriangulo2, baseTriangulo){
-    perimetro = ladoTriangulo1 + ladoTriangulo2 + baseTriangulo
+function perimetroTriangulo(lado1, base){
+    perimetro = (lado1 * 2) + base
     return perimetro
 }
 //Area de un triangulo
-function areaTriangulo(baseTriangulo, alturaTriangulo){
-    area = (baseTriangulo * alturaTriangulo) / 2
+function areaTriangulo(base, alturaTriangulo){
+    area = (base * alturaTriangulo) / 2
     return area
 }
 console.groupEnd()
@@ -48,7 +48,7 @@ function areaCirculo(radio){
     return area
 }
 console.groupEnd()
-
+//funcion de cuadrados
 function calcularPerimetroCuadrado() {
     const input = document.getElementById("InputCuadrado");
     const value = input.value;
@@ -62,4 +62,41 @@ function calcularAreaCuadrado() {
     const value = input.value;
     const area = areaCuadrado(value);
     alert(area);
+}
+
+//funcion de circulos
+function calcularPerimetroCirculo() {
+    const input = document.getElementById("InputCirculo");
+    const value = input.value;
+
+    const perimetro = perimetroCirculo(value);
+    alert(perimetro)
+}
+function calcularAreaCirculo() {
+    const input = document.getElementById("InputCirculo");
+    const value = input.value;
+
+    const area = areaCirculo(value);
+    alert(area)
+}
+
+//funciones de triangulo
+function calcularPerimetroTriangulo() {
+    const l1 = document.getElementById("InputLado1Triangulo");
+    const lado1 = l1.value;
+    const bas = document.getElementById("InputBaseTriangulo");
+    const base = bas.value;
+
+    const perimetro = perimetroTriangulo(lado1, base);
+    alert(perimetro)
+}
+
+function calcularAreaTriangulo() {
+    const al = document.getElementById("InputAlturaTriangulo");
+    const altura = al.value;
+    const bas = document.getElementById("InputBaseTriangulo");
+    const base = bas.value;
+
+    const area = areaTriangulo(base, altura);
+    alert(area)
 }
