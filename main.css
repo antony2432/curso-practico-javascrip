@@ -46,12 +46,14 @@ main {
     position: absolute;
     top: calc(50% - 100px);
     left: calc(50% - 250px);
+    border-radius: 5px;
 }
 .cudrado--Section h2 {
     margin-left: 22px;
+    margin-top: 9px;
 }
 .cudrado--Section p {
-    margin-top: 10px;
+    margin-top: 8px;
     margin-left: 22px;
     margin-bottom: 10px;
     font-size: 14px;
