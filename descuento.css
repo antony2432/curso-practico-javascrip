@@ -30,6 +30,7 @@ section {
     position: absolute;
     left: calc(50% - 200px);
     top:  calc(50% - 150px);
+    box-shadow: 0 1px 16px 0 #20212447;
 }
 section h2{
     font-size: 30px;
