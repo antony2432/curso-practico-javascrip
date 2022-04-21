@@ -13,3 +13,9 @@
 - Segundo: iplemetar las formulas en JavaScrip
 - Tercer paso: crear funciones
 - Cuarto paso: integrar JS con HTML
+
+## Taller #3: promedio, mediana, moda
+- Primer paso: definir las formas
+- Segundo: iplemetar las formulas en JavaScrip
+- Tercer paso: crear funciones
+- Cuarto paso: integrar JS con HTML
