@@ -17,12 +17,14 @@ function datosClick(){
     const inputDatos = document.getElementById("numeroDatos");
     const numeroDatos = inputDatos.value;
     console.log(numeroDatos);
+    document.getElementById("datosExp").innerHTML += "<p>Ingrese sus datos</p>"
     for (let i = 0; i < numeroDatos; i++) {
-        document.getElementById("datosExp").innerHTML+= "<p>Ingrese sus datos</p>" + "<input type='number' class='botonCalcular'>";
+        document.getElementById("datosExp").innerHTML += "<br>" + "<input type='number' class='botonCalcular'>" + "<br>";
     }
 }; 
 function calcularPromedio() {
     const inputCalcular = document.getElementsByClassName("botonCalcular");
     const valores = inputCalcular.value;
-    calcularMediaAritmetica(valores);
+    const pLista = calcularMediaAritmetica(valores);
+    document.getElementById("resultado").innerText= "El promedio es: " + pLista;
 } 
