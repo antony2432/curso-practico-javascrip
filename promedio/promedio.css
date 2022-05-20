@@ -28,9 +28,6 @@ main section {
     flex-direction: column;
     align-items: center;
 }
-main section .labelCant {
-    
-}
 main section .btnsend {
     margin-top: 10px;
     margin-bottom: 8px;
