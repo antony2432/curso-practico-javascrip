@@ -6,6 +6,7 @@ const lista1 = [
 ]
 
 function calcularMediana(lista) {
+
     // funcion para sacar el promedio
     function calcularMediaAritmetica(lista) {
         const sumaLista = lista.reduce(
@@ -18,8 +19,16 @@ function calcularMediana(lista) {
         return promedioLista;
     }
 
+
+    let listaOrdenada = lista.sort(
+        function (a, b){
+            return a - b;
+        }
+    );
+
+
     // con esto verificamos que la lista es par o no 
-    const mitadLista1 = parseInt(lista.length / 2);
+    const mitadLista = parseInt(listaOrdenada.length / 2);
 
     function esPar (numerito) {
         return numerito % 2 === 0;
@@ -29,8 +38,8 @@ function calcularMediana(lista) {
     let mediana;
 
     if (esPar(lista.length)){
-        const elemento1 = lista[mitadLista1];
-        const elemento2 = lista[mitadLista1 - 1];
+        const elemento1 = listaOrdenada[mitadLista];
+        const elemento2 = listaOrdenada[mitadLista - 1];
     
         const promedioElemento1y2 = calcularMediaAritmetica([
             elemento1, 
@@ -39,7 +48,7 @@ function calcularMediana(lista) {
     
         mediana = promedioElemento1y2;
     }else {
-        mediana = lista[mitadLista1]
+        mediana = listaOrdenada[mitadLista]
     };
 
     return mediana;
