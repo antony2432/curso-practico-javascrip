@@ -12,19 +12,22 @@ function calcularMediaAritmetica(lista) {
     const promedioLista = sumaLista / lista.length;
     return promedioLista;
 }
-
+const listas = [];
 function datosClick(){
     const inputDatos = document.getElementById("numeroDatos");
     const numeroDatos = inputDatos.value;
     console.log(numeroDatos);
     document.getElementById("datosExp").innerHTML += "<p>Ingrese sus datos</p>"
     for (let i = 0; i < numeroDatos; i++) {
-        document.getElementById("datosExp").innerHTML += "<br>" + "<input type='number' class='botonCalcular'>" + "<br>";
+        document.getElementById("datosExp").innerHTML += "<br>" + "<input type='number' class='botonCalcular' id='inputs'>" + "<br>";
     }
 }; 
 function calcularPromedio() {
-    const inputCalcular = document.getElementsByClassName("botonCalcular");
-    const valores = inputCalcular.value;
-    const pLista = calcularMediaAritmetica(valores);
+    let iteraciones = inputDatos.value;
+    for (let i = 0; i < iteraciones; i ++){
+        listas.push(document.getElementById("inputs").value);
+    }
+    
+    const pLista = calcularMediaAritmetica(listas);
     document.getElementById("resultado").innerText= "El promedio es: " + pLista;
 } 
