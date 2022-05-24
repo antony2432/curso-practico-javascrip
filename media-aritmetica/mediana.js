@@ -53,3 +53,12 @@ function calcularMediana(lista) {
 
     return mediana;
 }
+
+
+function btmCalcular() {
+    const input = document.getElementById("listaE").value;
+    const str = input.split(',');
+    let resultados = calcularMediana(str);
+    console.log(resultados);
+};
+
