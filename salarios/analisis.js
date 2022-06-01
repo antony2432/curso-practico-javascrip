@@ -1,15 +1,4 @@
-const salariosCol = colombia.map(
-    function (personita) {
-        return personita.salary;
-    }
-);
-
-const salariosColSorted = salariosCol.sort(
-    function (salaryA, salaryB) {
-        return salaryA - salaryB;
-    }
-);
-
+//funciones helpers
 function esPar(numerito) {
     return (numerito % 2 === 0);
 }
@@ -25,6 +14,8 @@ function calcularMediaAritmetica(lista) {
     return promedioLista;
 }
 
+
+//calculadora de mediana
 function medianaSalarios(lista){
     const mitad = parseInt(lista.length / 2);
 
@@ -40,4 +31,37 @@ function medianaSalarios(lista){
     }
 };
 
-console.log('La media de los salarios de Colombia es: ' + medianaSalarios(salariosColSorted));
+
+//Media General
+const salariosCol = colombia.map(
+    function (personita) {
+        return personita.salary;
+    }
+);
+
+const salariosColSorted = salariosCol.sort(
+    function (salaryA, salaryB) {
+        return salaryA - salaryB;
+    }
+);
+
+
+const medianaGeneralCol = medianaSalarios(salariosColSorted);
+
+//media del top 10%
+const spliceStart = (salariosColSorted.length * 90) / 100;
+const spliceCount = salariosColSorted.length - spliceStart;
+
+
+const salariosColTop10 = salariosColSorted.splice(
+    spliceStart,
+    spliceCount,
+);
+
+const medianaTop10Col = salariosColTop10;
+
+
+console.log({
+    medianaGeneralCol,
+    medianaTop10Col,
+});
