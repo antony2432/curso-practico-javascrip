@@ -12,22 +12,26 @@ function calcularMediaAritmetica(lista) {
     const promedioLista = sumaLista / lista.length;
     return promedioLista;
 }
-const listas = [];
 function datosClick(){
     const inputDatos = document.getElementById("numeroDatos");
     const numeroDatos = inputDatos.value;
     console.log(numeroDatos);
     document.getElementById("datosExp").innerHTML += "<p>Ingrese sus datos</p>"
     for (let i = 0; i < numeroDatos; i++) {
-        document.getElementById("datosExp").innerHTML += "<br>" + "<input type='number' class='botonCalcular' id='inputs'>" + "<br>";
+        document.getElementById("datosExp").innerHTML += `<br>` + `<input type='number' class='botonCalcular' id='${'number'+i}'>` + `<br>`;
     }
 }; 
 function calcularPromedio() {
-    let iteraciones = inputDatos.value;
-    for (let i = 0; i < iteraciones; i ++){
-        listas.push(document.getElementById("inputs").value);
+    const cer = [];
+    const cantidad = Number(document.getElementById("numeroDatos").value);
+
+    for (let i = 0; i < cantidad; i ++){
+        let a = 'number'+i;
+        const numeros = Number(document.getElementById(a).value);
+        cer.push(numeros);
     }
     
-    const pLista = calcularMediaAritmetica(listas);
-    document.getElementById("resultado").innerText= "El promedio es: " + pLista;
+    console.log(cer);
+    const pLista = calcularMediaAritmetica(cer);
+    document.getElementById("rest").innerText= "El promedio es: " + pLista;
 } 
