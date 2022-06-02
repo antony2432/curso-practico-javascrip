@@ -9,11 +9,14 @@
 <body>
   <h1>Mediana</h1>  
   <p>Calcular la mediana</p>
-
-  <label for="listaE">Ingrese su lista</label>
-  <input type="text" name="listaE" id="listaE">
-  <button type="button" onclick="btmCalcular()">Calcular</button>
-  <p id="resultado"></p>
+  <section>
+    <label for="numeroDatos" class="labelCant">Ingrese el numero de datos</label>
+    <input type="number" id="numeroDatos" autofocus>
+    <button type="button" onclick="datosClick()" class="btnsend">Enviar</button>
+    <p id="datosExp"></p>
+    <button type="button" onclick="btmCalcular()">Calcular</button>
+    <p id="resultado"></p>
+  </section>
 
   <script src="./mediana.js"></script>
 </body>

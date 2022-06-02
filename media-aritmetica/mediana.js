@@ -56,9 +56,28 @@ function calcularMediana(lista) {
 
 
 function btmCalcular() {
-    const input = document.getElementById("listaE").value;
-    const str = input.split(',');
-    let resultados = calcularMediana(str);
+    const cer = [];
+    const cantidad = Number(document.getElementById("numeroDatos").value);
+
+    for (let i = 0; i < cantidad; i ++){
+        let a = 'number'+i;
+        const numeros = Number(document.getElementById(a).value);
+        cer.push(numeros);
+    }
+    
+    console.log(cer);
+
+    let resultados = calcularMediana(cer);
     console.log(resultados);
+    document.getElementById("resultado").innerText = `la respuesta es: ${resultados}`
 };
 
+function datosClick(){
+    const inputDatos = document.getElementById("numeroDatos");
+    const numeroDatos = inputDatos.value;
+    console.log(numeroDatos);
+    document.getElementById("datosExp").innerHTML += "<p>Ingrese sus datos</p>"
+    for (let i = 0; i < numeroDatos; i++) {
+        document.getElementById("datosExp").innerHTML += `<br>` + `<input type='number' class='botonCalcular' id='${'number'+i}'>` + `<br>`;
+    }
+}; 
