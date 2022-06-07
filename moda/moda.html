@@ -8,6 +8,21 @@
 </head>
 <body>
     <h1>Moda</h1>
+
+    <section>
+        <label for="numeroDatos" class="labelCant">Ingrese el numero de datos</label>
+        <input type="number" id="numeroDatos" autofocus>
+        <button type="button" onclick="datosClick()" class="btnsend">Enviar</button>
+        <div id="datosExp">
+            
+        </div>
+        <br>
+        <button type="button" onclick="calcularModas()">Calcular</button>
+        <p id="resultado"></p>
+        <br>
+        <p id="rest"></p>
+    </section>
+
     <script src="./moda.js"></script>
 </body>
 </html>

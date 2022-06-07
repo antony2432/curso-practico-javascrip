@@ -1,16 +1,3 @@
-const lista1 = [
-    1,
-    2,
-    3,
-    1,
-    2,
-    3,
-    4,
-    2,
-    2,
-    2,
-    1,
-];
 // aqui creamos un objeto donde se va almacenar la lista
 // const lista1Count = {};
 
@@ -56,3 +43,26 @@ function calcularModa(listaEjem,){
     const moda = listaArray[listaArray.length - 1];
     return moda;
 };
+function datosClick(){
+    const inputDatos = document.getElementById("numeroDatos");
+    const numeroDatos = inputDatos.value;
+    console.log(numeroDatos);
+    document.getElementById("datosExp").innerHTML += "<p>Ingrese sus datos</p>"
+    for (let i = 0; i < numeroDatos; i++) {
+        document.getElementById("datosExp").innerHTML += `<br>` + `<input type='number' class='botonCalcular' id='${'number'+i}'>` + `<br>`;
+    }
+}; 
+function calcularModas() {
+    const cer = [];
+    const cantidad = Number(document.getElementById("numeroDatos").value);
+
+    for (let i = 0; i < cantidad; i ++){
+        let a = 'number'+i;
+        const numeros = Number(document.getElementById(a).value);
+        cer.push(numeros);
+    }
+    
+    console.log(cer);
+    const pLista = calcularModa(cer);
+    document.getElementById("rest").innerText= "La moda es: " + pLista[0] + " y se repite: " + pLista[1];
+} 

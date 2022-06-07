@@ -1,10 +1,3 @@
-const lista1 = [
-    100,
-    200,
-    500,
-    400000000,
-]
-
 function calcularMediana(lista) {
 
     // funcion para sacar el promedio
